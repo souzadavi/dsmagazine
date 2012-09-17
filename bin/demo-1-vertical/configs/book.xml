@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<book>
+	<chapter name="Demo Parte 1" load="true">
+		<page file="1/capa.swf" type="swf" />
+		<page file="1/page_2.swf" type="swf" />
+		<page file="1/page_3.swf" type="swf" />
+		<page file="1/page_4.swf" type="swf" />
+	</chapter>
+</book>	

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configs>
+	<screen height="1232" width="800" aspectioRatio="portrait" />
+	<book name="Demo DSMagazine" />
+	<chapters quantity="1" />
+</configs>	
