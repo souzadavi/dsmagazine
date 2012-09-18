@@ -3,6 +3,8 @@
 	import com.greensock.loading.*;
 	import flash.display.Sprite;
 	import flash.events.MouseEvent;
+	import flash.net.URLLoader;
+	import flash.net.URLRequest;
 	import flash.utils.getTimer;
 	import flash.events.Event;
 	import flash.geom.Rectangle;
@@ -11,7 +13,10 @@
 	
 	public class DSMagazine extends Sprite {
 		//private var _pageBounds:Rectangle = new Rectangle(0, 0, 1232, 780);// Horizontal
-		private var _pageBounds:Rectangle = new Rectangle(0, 0, 800, 1232); //Vertical
+		//private var _pageBounds:Rectangle = new Rectangle(0, 0, 800, 1232); //Vertical//ANDROID
+		//private var _configs:Configs = new Configs();
+		//private var _pageBounds:Rectangle = new Rectangle(0, 0, 768, 1024); //Vertical //IPAD
+		private var _pageBounds:Rectangle;
 		private var _container:Sprite;
 		private var _currentPageIndex:int = 0;
 		private var _pageCount:int;
@@ -19,37 +24,31 @@
 		private var _x2:Number;
 		private var _t1:uint;
 		private var _t2:uint;
-		public var appsName:String;
 
-		public function DSMagazine(appsName:String){
-			
-			trace("INICIAL:"+appsName);
-			
+		public function DSMagazine(){
+			this.init();
+		}
+		
+		private function init():void {
+			var xmlLoader:XMLLoader = new XMLLoader("configs/book.xml", {onComplete:_xmlCompleteHandler});
+			xmlLoader.load();
+		}
+
+		private function _xmlCompleteHandler(event:LoaderEvent):void {
+			var configs:XMLList = event.target.content.configs;
+			var chapters:XMLList = event.target.content.book.chapter;
+
+			_pageBounds = new Rectangle(0, 0, Number(configs.screen.@width), Number(configs.screen.@height));
 			_container = new Sprite();
+			
 			_container.x = _pageBounds.x;
 			_container.y = _pageBounds.y;
 			addChildAt(_container, 0);
 			_container.addEventListener(MouseEvent.MOUSE_DOWN, _mouseDownHandler, false, 0, true);
-			var xmlLoader:XMLLoader = new XMLLoader("configs/book.xml", {onComplete:_xmlCompleteHandler});
-			xmlLoader.load();
-			//trace("xmlLoader:"+xmlLoader);
-			this.init();
-			
-		}
-		
-		private function init():void {
-			
-		}
-
-		private function _xmlCompleteHandler(event:LoaderEvent):void {
-			var chapters:XMLList = event.target.content.chapter;
 			_pageCount = chapters.page.length();
-			trace("PAGINAS CONTADAS:"+chapters);
+
 			var queue:LoaderMax = new LoaderMax();
-			//LoaderMax.activate([pages]);
-			// Load Chapter only in image
-			//trace(chapters[0]);
-			//queue.append( new ImageLoader("assets/" + chapters.@file, {x:0 * _pageBounds.width, width:_pageBounds.width, height:_pageBounds.height, container:_container}) );
+
 			for (var i:int = 0; i < _pageCount; i++) {
 				//trace("PAGINAS CONTADAS:"+ chapters.page[i].@type);
 				switch (String(chapters.page[i].@type)){

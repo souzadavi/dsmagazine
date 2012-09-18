@@ -10,17 +10,15 @@
 	import com.greensock.TweenLite;
 	import com.greensock.easing.Strong;
 	
-	public class Main extends Sprite {
+	public class Main extends DSMagazine {
 		
-		private var revista:DSMagazine;
+		//private var revista:DSMagazine;
 		
 		
 		public function Main() {
-			this.revista = new DSMagazine("demo-1-vertical");
+			//this.revista = new DSMagazine("demo-1-vertical");
 		}
 		
-		public function init() {
-			
-		}
+		
 	}
 }

@@ -1,9 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
-<book>
-	<chapter name="Demo Parte 1" load="true">
-		<page file="1/capa.swf" type="swf" />
-		<page file="1/page_2.swf" type="swf" />
-		<page file="1/page_3.swf" type="swf" />
-		<page file="1/page_4.swf" type="swf" />
-	</chapter>
-</book>	
+<data>
+	<configs load="false">
+		<screen height="1232" width="800" aspectioRatio="portrait" />
+		<book name="Demo DSMagazine" />
+		<chapters quantity="1" />
+	</configs>
+	<book>
+		<chapter name="Demo Parte 1" load="true">
+			<page file="1/page_1.jpg" type="image" />
+			<page file="1/page_2.jpg" type="image" />
+			<page file="1/page_3.jpg" type="image" />
+			<page file="1/page_4.jpg" type="image" />
+		</chapter>
+		<chapter name="Demo Parte 2" load="false">
+			<page file="1/page_1.jpg" type="image" />
+			<page file="1/page_2.jpg" type="image" />
+			<page file="1/page_3.jpg" type="image" />
+			<page file="1/page_4.jpg" type="image" />
+		</chapter>
+		<chapter name="Demo Parte 3" load="false">
+			<page file="1/page_1.jpg" type="image" />
+			<page file="1/page_2.jpg" type="image" />
+			<page file="1/page_3.jpg" type="image" />
+			<page file="1/page_4.jpg" type="image" />
+		</chapter>
+		<chapter name="Demo Parte 4" load="false">
+			<page file="1/page_1.jpg" type="image" />
+			<page file="1/page_2.jpg" type="image" />
+			<page file="1/page_3.jpg" type="image" />
+			<page file="1/page_4.jpg" type="image" />
+		</chapter>
+		<chapter name="Demo Parte 5" load="false">
+			<page file="1/page_1.jpg" type="image" />
+			<page file="1/page_2.jpg" type="image" />
+			<page file="1/page_3.jpg" type="image" />
+			<page file="1/page_4.jpg" type="image" />
+		</chapter>
+		<chapter name="Demo Parte 6" load="false">
+			<page file="1/page_1.jpg" type="image" />
+			<page file="1/page_2.jpg" type="image" />
+			<page file="1/page_3.jpg" type="image" />
+			<page file="1/page_4.jpg" type="image" />
+		</chapter>
+		<chapter name="Demo Parte 7" load="false">
+			<page file="1/page_1.jpg" type="image" />
+			<page file="1/page_2.jpg" type="image" />
+			<page file="1/page_3.jpg" type="image" />
+			<page file="1/page_4.jpg" type="image" />
+		</chapter>
+		<chapter name="Demo Parte 8" load="false">
+			<page file="1/page_1.jpg" type="image" />
+			<page file="1/page_2.jpg" type="image" />
+			<page file="1/page_3.jpg" type="image" />
+			<page file="1/page_4.jpg" type="image" />
+		</chapter>
+		<chapter name="Demo Parte 9" load="false">
+			<page file="1/page_1.jpg" type="image" />
+			<page file="1/page_2.jpg" type="image" />
+			<page file="1/page_3.jpg" type="image" />
+			<page file="1/page_4.jpg" type="image" />
+		</chapter>
+		<chapter name="Demo Parte 10" load="false">
+			<page file="1/page_1.jpg" type="image" />
+			<page file="1/page_2.jpg" type="image" />
+			<page file="1/page_3.jpg" type="image" />
+			<page file="1/page_4.jpg" type="image" />
+		</chapter>
+	</book>
+</data>	
