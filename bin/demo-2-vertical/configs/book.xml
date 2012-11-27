@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<data>
+	<configs load="false">
+		<screen height="1024" width="768" aspectioRatio="portrait" />
+		<book name="Demo DSMagazine" />
+		<chapters quantity="1" pages="7" />
+	</configs>
+	<book>
+		<chapter name="Demo Parte 2" load="true">
+			<page file="capa.jpg" />
+			<page file="page_2.swf" />
+			<page file="page_3.jpg" />
+			<page file="page_4.jpg" />
+			<page file="page_5.jpg" />
+			<page file="page_6.jpg" />
+			<page file="page_7.jpg" />
+		</chapter>
+	</book>
+</data>	
